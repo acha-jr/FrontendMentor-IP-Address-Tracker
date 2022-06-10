@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "Rubik", sans-serif;
+
+  --very-dark-gray: hsl(0, 0%, 17%);
+  --dark-gray: hsl(0, 0%, 59%);
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url(./images/pattern-bg.png) no-repeat;
+}
+main {
+  margin-top: 30px;
+  color: var(--very-dark-gray);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+h1 {
+  color: white;
+  font-weight: 500;
+  text-align: center;
+}
+.input-field {
+  margin: 0 auto;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+input {
+  width: 550px;
+  height: 50px;
+  border-radius: 15px 0 0 15px;
+  border: none;
+  font-size: 1em;
+  padding-left: 30px;
+}
+input:focus {
+  outline: none;
+}
+button {
+  background: #000;
+  height: 50px;
+  width: 50px;
+  border-radius: 0 15px 15px 0;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+button:hover {
+  background: rgb(49, 49, 49);
+}
+.details {
+  margin: 0 auto;
+  width: fit-content;
+  margin-top: 45px;
+  background: white;
+  border-radius: 15px;
+  padding: 45px 30px;
+  display: flex;
+  pointer-events: none;
+}
+.details div:not(.details div:first-child) {
+  border-left: 1px solid var(--dark-gray);
+  padding-left: 20px;
+}
+.details div {
+  padding-right: 50px;
+}
+.details h5 {
+  color: var(--dark-gray);
+  font-weight: 500;
+  text-transform: uppercase;
+  transform: translateY(-8px);
+}
+.details h2 {
+  transform: translateY(8px);
+  font-size: 1.7em;
+  font-weight: 500;
+}
+
+#map {
+  background: #ccc;
+  position: absolute;
+  width: 100%;
+  height: calc(100vh - 250px);
+  z-index: -1;
+  top: 250px;
+}
+
+@media screen and (max-width: 900px) {
+  .input-field {
+    width: 90%;
+    margin-top: 20px;
+  }
+  input {
+    width: 80%;
+    margin: 0;
+    padding-left: 15px;
+    font-size: 0.9em;
+  }
+  .details {
+    display: block;
+    margin-top: 25px;
+    text-align: center;
+    width: 85%;
+    padding: 20px;
+  }
+  .details div {
+    padding: 0;
+  }
+  .details div:not(.details div:first-child) {
+    border-left: none;
+    padding-left: 0px;
+  }
+  .details h5,
+  .details h2 {
+    transform: translateY(0);
+  }
+  .details h5 {
+    margin-top: 20px;
+  }
+  .details h2 {
+    font-size: 1.5em;
+    margin-top: 8px;
+  }
+}

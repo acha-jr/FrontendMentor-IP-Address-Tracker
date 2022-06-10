@@ -46,18 +46,21 @@ const setLocation = (lat, long) => {
   L.marker([lat, long], { icon: myIcon }).addTo(map);
 };
 
+const api =
+  "https://geo.ipify.org/api/v2/country,city?apiKey=at_JM5HNk7lCZ4ug74ybof00BrmCKR80&domain=";
+
 button.addEventListener("click", () => {
-  let url = `https://geo.ipify.org/api/v2/country,city?apiKey=at_2WQbTZ9jnv0G1oPRzvzN8qEE5it0e&ipAddress=${input.value}`;
+  let url = api + input.value;
   fetchData(url);
 });
+
 input.addEventListener("keypress", (e) => {
   if (e.key === "Enter") {
-    let url = `https://geo.ipify.org/api/v2/country,city?apiKey=at_2WQbTZ9jnv0G1oPRzvzN8qEE5it0e&ipAddress=${input.value}`;
+    let url = api + input.value;
     fetchData(url);
   }
 });
 
 window.addEventListener("load", () => {
-  let url = `https://geo.ipify.org/api/v2/country,city?apiKey=at_2WQbTZ9jnv0G1oPRzvzN8qEE5it0e&ipAddress=`;
-  fetchData(url);
+  fetchData(api);
 });

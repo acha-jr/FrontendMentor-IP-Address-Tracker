@@ -67,6 +67,7 @@ button:hover {
   padding: 45px 30px;
   display: flex;
   pointer-events: none;
+  z-index: 20;
 }
 .details div:not(.details div:first-child) {
   border-left: 1px solid var(--dark-gray);

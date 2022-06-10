@@ -9,12 +9,16 @@ const isp = document.querySelector(".ISP");
 const input = document.querySelector("input");
 const button = document.querySelector("button");
 
+const errorMessage = document.querySelector(".error");
+
 const fetchData = (apiurl) => {
   fetch(apiurl)
     .then((resp) => {
       return resp.json();
     })
     .then((data) => {
+      errorMessage.style.display = "none";
+
       ipAddress.textContent = data.ip;
       city.textContent = data.location.city;
       region.textContent = data.location.region;
@@ -26,6 +30,9 @@ const fetchData = (apiurl) => {
       let long = data.location.lng;
 
       setLocation(lat, long);
+    })
+    .catch(() => {
+      errorMessage.style.display = "block";
     });
 };
 

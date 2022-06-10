@@ -2,7 +2,7 @@
 APIs seem interesting 👍🏾
 
 ## Preview
-![ezgif com-video-to-gif](https://user-images.githubusercontent.com/105124616/173050109-6bcfd817-831d-4686-9e6d-2c18ce3d1234.gif)
+![ezgif com-video-to-gif](https://user-images.githubusercontent.com/105124616/173066041-b0ff9e09-9c64-4a6c-9bdc-3ed305233fb2.gif)
 
 ## Challenge from Frontend Mentor
 https://frontendmentor.io/

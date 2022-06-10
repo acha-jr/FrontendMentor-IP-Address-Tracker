@@ -66,7 +66,6 @@ button:hover {
   border-radius: 15px;
   padding: 45px 30px;
   display: flex;
-  pointer-events: none;
   z-index: 2;
 }
 .details div:not(.details div:first-child) {

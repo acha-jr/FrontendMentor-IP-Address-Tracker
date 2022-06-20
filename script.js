@@ -2,6 +2,7 @@ const ipAddress = document.querySelector(".IP");
 const ipLocation = document.querySelector(".location");
 const city = document.querySelector(".city");
 const region = document.querySelector(".region");
+const country = document.querySelector(".country");
 const postcode = document.querySelector(".postcode");
 const timezone = document.querySelector(".timezone");
 const isp = document.querySelector(".ISP");
@@ -23,6 +24,7 @@ const fetchData = (apiurl) => {
       city.textContent = data.location.city;
       region.textContent = data.location.region;
       postcode.textContent = data.location.postalCode;
+      country.textContent = data.location.country;
       timezone.textContent = data.location.timezone;
       isp.textContent = data.isp;
 

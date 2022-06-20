@@ -69,12 +69,18 @@ button:hover {
 .details {
   margin: 0 auto;
   width: fit-content;
-  margin-top: 45px;
+  margin-top: 25px;
   background: white;
   border-radius: 15px;
   padding: 45px 30px;
   display: flex;
   z-index: 2;
+}
+.country,
+.postcode {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--dark-gray);
 }
 .details div:not(.details div:first-child) {
   border-left: 1px solid var(--dark-gray);
